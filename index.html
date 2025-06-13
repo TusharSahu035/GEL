@@ -557,198 +557,6 @@
             font-size: 0.875rem;
             color: #ff6f61;
         }
-
-        /* Post a Comment Section */
-        .post-comment {
-            padding: 6.25rem 2.5rem;
-            text-align: center;
-            background-color: #f9f9f9;
-        }
-
-        .post-comment h2 {
-            font-family: 'Dancing Script', cursive;
-            font-size: clamp(2rem, 5vw, 3rem);
-            color: #1a2a44;
-            margin-bottom: 2.5rem;
-        }
-
-        .comment-form {
-            max-width: 600px;
-            margin: 0 auto 2.5rem;
-        }
-
-        .comment-form input,
-        .comment-form textarea {
-            width: 100%;
-            padding: 0.625rem;
-            margin-bottom: 1.25rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 0.875rem;
-            outline: none;
-        }
-
-        .comment-form textarea {
-            height: 100px;
-            resize: none;
-        }
-
-        .comment-form button {
-            background-color: #ff6f61;
-            color: white;
-            padding: 0.625rem 1.25rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            min-width: 150px;
-        }
-
-        .comment-form button:hover {
-            background-color: #e65a50;
-        }
-
-        .comments-list {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .comment-item {
-            background-color: white;
-            padding: 1.25rem;
-            border-radius: 5px;
-            margin-bottom: 1.25rem;
-            text-align: left;
-        }
-
-        .comment-item p {
-            font-size: 0.875rem;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .comment-item .comment-meta {
-            font-size: 0.75rem;
-            color: #ff6f61;
-            margin-top: 0.625rem;
-        }
-
-        /* Chatbot */
-        .chatbot {
-            position: fixed;
-            bottom: 1.25rem;
-            left: 1.25rem;
-            z-index: 1000;
-            display: none;
-        }
-
-        .chatbot.visible {
-            display: block;
-        }
-
-        .chatbot-toggle {
-            background-color: #ff6f61;
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            cursor: pointer;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
-        }
-
-        .chatbot-toggle:hover {
-            transform: scale(1.1);
-        }
-
-        .chatbot-window {
-            display: none;
-            position: absolute;
-            bottom: 4.375rem;
-            left: 0;
-            width: 300px;
-            height: 400px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-        }
-
-        .chatbot-window.active {
-            display: block;
-        }
-
-        .chatbot-header {
-            background-color: #ff6f61;
-            color: white;
-            padding: 0.625rem;
-            font-size: 1rem;
-            font-weight: 600;
-            text-align: center;
-        }
-
-        .chatbot-body {
-            padding: 0.625rem;
-            height: 320px;
-            overflow-y: auto;
-            background-color: #f9f9f9;
-        }
-
-        .chat-message {
-            margin-bottom: 0.625rem;
-            padding: 0.5rem;
-            border-radius: 5px;
-            max-width: 80%;
-        }
-
-        .chat-message.bot {
-            background-color: #ff6f61;
-            color: white;
-            margin-right: auto;
-        }
-
-        .chat-message.user {
-            background-color: #ddd;
-            color: #333;
-            margin-left: auto;
-        }
-
-        .chatbot-input {
-            display: flex;
-            align-items: center;
-            padding: 0.625rem;
-            border-top: 1px solid #ddd;
-        }
-
-        .chatbot-input input {
-            flex-grow: 1;
-            padding: 0.5rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 0.875rem;
-            outline: none;
-        }
-
-        .chatbot-input button {
-            background-color: #ff6f61;
-            color: white;
-            border: none;
-            padding: 0.5rem 0.75rem;
-            border-radius: 5px;
-            margin-left: 0.625rem;
-            cursor: pointer;
-        }
-
-        .chatbot-input button:hover {
-            background-color: #e65a50;
-        }
-
         /* Footer */
         footer {
             background-color: white;
@@ -793,7 +601,7 @@
         }
 
         footer .social-links a {
-            color: white;
+            color: rgb(0, 0, 0);
             margin: 0 0.625rem;
             font-size: 1.125rem;
             text-decoration: none;
@@ -902,16 +710,6 @@
                 align-items: center;
                 gap: 1.25rem;
             }
-
-            .chatbot-window {
-                width: 250px;
-                height: 350px;
-            }
-
-            .chatbot-body {
-                height: 270px;
-            }
-
             footer .footer-grid {
                 flex-direction: column;
                 align-items: center;
@@ -1127,19 +925,6 @@
             </div>
         </div>
     </section>
-
-    <section class="post-comment" id="post-comment">
-        <h2>Post a Comment</h2>
-        <div class="comment-form">
-            <input type="email" id="comment-email" placeholder="Your Email" required>
-            <textarea id="comment-text" placeholder="Your Comment" required></textarea>
-            <button onclick="postComment()">Submit Comment</button>
-        </div>
-        <div class="comments-list" id="comments-list">
-            <!-- Comments will be dynamically added here -->
-        </div>
-    </section>
-
     <footer id="contact">
         <div class="footer-grid">
             <div class="footer-column">
@@ -1150,7 +935,7 @@
                 <h4>Contact Info</h4>
                 <p>Email: contact@gemilerenterprises.com</p>
                 <p>Phone: +1-555-123-4567</p>
-                <p>Address: UNIT-A,8/F KWUN TONG INDUSTRIAL CENTRE PHASE-3,448-458 KWUN TONG ROAD, KOWLOON, HONG KONG</p>
+                <p>Address: 123 Entertainment Ave, City, Country</p>
             </div>
             <div class="footer-column">
                 <h4>Quick Links</h4>
@@ -1169,21 +954,6 @@
             <p>© 2025 Gemiler Enterprises Limited. All rights reserved.</p>
         </div>
     </footer>
-
-    <div class="chatbot">
-        <div class="chatbot-toggle">💬</div>
-        <div class="chatbot-window">
-            <div class="chatbot-header">Chat with Us!</div>
-            <div class="chatbot-body" id="chatbot-body">
-                <div class="chat-message bot">Hello! How can we assist you today?</div>
-            </div>
-            <div class="chatbot-input">
-                <input type="text" id="chatbot-input" placeholder="Type your message...">
-                <button onclick="sendMessage()">Send</button>
-            </div>
-        </div>
-    </div>
-
     <script>
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1292,138 +1062,6 @@
                 chatbotInput.focus();
             }
         });
-
-        function sendMessage() {
-            const message = chatbotInput.value.trim();
-            if (!message) return;
-
-            const userMessage = document.createElement('div');
-            userMessage.classList.add('chat-message', 'user');
-            userMessage.textContent = message;
-            chatbotBody.appendChild(userMessage);
-
-            const botMessage = document.createElement('div');
-            botMessage.classList.add('chat-message', 'bot');
-            botMessage.textContent = "Thank you for your message! We'll get back to you soon.";
-            chatbotBody.appendChild(botMessage);
-
-            chatbotInput.value = '';
-            chatbotBody.scrollTop = chatbotBody.scrollHeight;
-        }
-
-        chatbotInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                sendMessage();
-            }
-        });
-
-        const footer = document.querySelector('footer');
-        const chatbotObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    chatbot.classList.add('visible');
-                } else {
-                    chatbot.classList.remove('visible');
-                    chatbotWindow.classList.remove('active');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        chatbotObserver.observe(footer);
-
-        // Post a Comment functionality
-        const commentsList = document.querySelector('#comments-list');
-        const commentEmail = document.querySelector('#comment-email');
-        const commentText = document.querySelector('#comment-text');
-
-        let comments = JSON.parse(localStorage.getItem('comments')) || [
-            {
-                email: "alice.johnson@gmail.com",
-                comment: "Amazing events! The wedding I attended was beautifully organized.",
-                date: "5/25/2025, 10:30 AM"
-            },
-            {
-                email: "bob.smith@yahoo.com",
-                comment: "I loved the Summer Music Festival last year. Can’t wait for the next one!",
-                date: "5/28/2025, 2:15 PM"
-            },
-            {
-                email: "clara.martin@outlook.com",
-                comment: "The catering at the corporate gala was top-notch. Great job, Gemiler Enterprises Limited!",
-                date: "5/30/2025, 9:00 AM"
-            },
-            {
-                email: "david.lee@gmail.com",
-                comment: "The team was very professional and made our event a huge success.",
-                date: "6/1/2025, 4:45 PM"
-            },
-            {
-                email: "emma.wilson@hotmail.com",
-                comment: "I highly recommend Gemiler Enterprises Limited for any event planning needs!",
-                date: "6/3/2025, 11:20 AM"
-            },
-            {
-                email: "frank.brown@gmail.com",
-                comment: "The venue they chose for our event was perfect. Thank you!",
-                date: "6/5/2025, 3:30 PM"
-            },
-            {
-                email: "grace.taylor@yahoo.com",
-                comment: "Their media production team did an amazing job capturing our event.",
-                date: "6/7/2025, 8:00 AM"
-            },
-            {
-                email: "henry.moore@outlook.com",
-                comment: "Looking forward to attending the Charity Gala 2025. Keep up the great work!",
-                date: "6/9/2025, 1:50 PM"
-            }
-        ];
-
-        localStorage.setItem('comments', JSON.stringify(comments));
-        renderComments();
-
-        function postComment() {
-            const email = commentEmail.value.trim();
-            const comment = commentText.value.trim();
-
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!email || !emailRegex.test(email)) {
-                alert('Please enter a valid email address.');
-                return;
-            }
-
-            if (!comment) {
-                alert('Please enter a comment.');
-                return;
-            }
-
-            const newComment = {
-                email: email,
-                comment: comment,
-                date: new Date().toLocaleString('en-US', { timeZone: 'Asia/Kolkata' })
-            };
-
-            comments.push(newComment);
-            localStorage.setItem('comments', JSON.stringify(comments));
-
-            commentEmail.value = '';
-            commentText.value = '';
-
-            renderComments();
-        }
-
-        function renderComments() {
-            commentsList.innerHTML = '';
-            comments.forEach(comment => {
-                const commentItem = document.createElement('div');
-                commentItem.classList.add('comment-item');
-                commentItem.innerHTML = `
-                    <p>${comment.comment}</p>
-                    <div class="comment-meta">Posted by ${comment.email} on ${comment.date}</div>
-                `;
-                commentsList.appendChild(commentItem);
-            });
-        }
     </script>
 </body>
 </html>
